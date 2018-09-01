@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv"
+    android:layout_width="fill_parent"
+    android:layout_height="250dp"
+    android:layout_marginTop="0dp">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher_round"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="65dp" />
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:background="@drawable/buttonshape"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="210dp"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+
+        android:textColor="#FFF9E3"
+
+
+
+        android:text="Download"></android.support.v7.widget.AppCompatButton>
+</FrameLayout>
+    <!--<fragment-->
+    <!--android:layout_below="@+id/img"-->
+    <!--android:id="@+id/frag"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|center"-->
+    <!--tools:layout="@layout/fragment_btn"/>-->
+    <!--<fragment-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|center"-->
+    <!--tools:layout="@layout/fragment_btn"></fragment>-->
+</android.support.v7.widget.CardView>
+
