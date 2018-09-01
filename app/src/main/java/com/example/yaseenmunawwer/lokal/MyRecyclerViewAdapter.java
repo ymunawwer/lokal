@@ -60,17 +60,19 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                     holder.pgrBarLoading.setVisibility(View.VISIBLE);
                     DownloadUrl task = new DownloadUrl();
                     task.downloadStarted(holder.pgrBarLoading);
+
                     if (checkSelfPermission(ctx, "android.permission.WRITE_EXTERNAL_STORAGE") != PackageManager.PERMISSION_GRANTED) {
                         requestPermissions((Activity) ctx, new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 138);
-                        task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
-                        task.execute((data.get(position).getPost_url())+"/download");
+                        task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,(data.get(position).getPost_url())+"/download");
+                        //task.execute((data.get(position).getPost_url())+"/download");
                         task.setProgressBar(holder.pgrBar);
                         task.btnDisable(holder.btn);
 
                         return;
                     } else {
-                        task.execute((data.get(position).getPost_url())+"/download");
+                        task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,(data.get(position).getPost_url())+"/download");
+                        //task.execute((data.get(position).getPost_url())+"/download");
                         task.setProgressBar(holder.pgrBar);
                         task.btnDisable(holder.btn);
                     }
